@@ -1,9 +1,4 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base"
-  ],
-  {
   "prBodyDefinitions": {
     "Age": "[![age](https://badges.renovateapi.com/packages/{{datasource}}/{{replace '/' '%2f' depName}}/{{{toVersion}}}/age-slim)](https://docs.renovatebot.com/merge-confidence/)",
     "Adoption": "[![adoption](https://badges.renovateapi.com/packages/{{datasource}}/{{replace '/' '%2f' depName}}/{{{toVersion}}}/adoption-slim)](https://docs.renovatebot.com/merge-confidence/)",
@@ -12,10 +7,9 @@
   },
   "packageRules": [
     {
-      "datasources": ["maven", "npm", "pypi", "nuget"],
+      "datasources": ["maven", "npm", "pypi"],
       "updateTypes": ["patch", "minor", "major"],
       "prBodyColumns": ["Package", "Change", "Age", "Adoption", "Passing", "Confidence"]
     }
   ]
-}
 }
